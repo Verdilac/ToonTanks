@@ -15,9 +15,15 @@ class TOONTANKS_API ATank : public ABasePawn
 	GENERATED_BODY()
 
 
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
 public:
 	ATank();
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	virtual void Tick(float DeltaTime) override;
 
 
 
@@ -34,7 +40,11 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 		float RotationSpeed = 300.f;
 
+	APlayerController* PlayerControllerRef;
+
 
 	void Move(float Value);
 	void Turn(float Value);
+
+
 };

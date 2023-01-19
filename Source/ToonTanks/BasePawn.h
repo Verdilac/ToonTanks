@@ -16,18 +16,16 @@ public:
 	ABasePawn();
 
 
-protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
-
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
 
 	// Called to bind functionality to input --> Since we are not using this in Base Pawn we dont need it here
 	//virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	
+
+protected:
+	void RotateTurret(FVector LookAtPoint);
+	void Fire();
+
+		
 
 
 private:
