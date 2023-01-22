@@ -15,6 +15,8 @@ public:
 	// Sets default values for this pawn's properties
 	ABasePawn();
 
+	void HandleDestruction();
+
 
 
 	// Called to bind functionality to input --> Since we are not using this in Base Pawn we dont need it here

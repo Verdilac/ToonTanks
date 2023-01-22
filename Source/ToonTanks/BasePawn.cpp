@@ -50,4 +50,14 @@ void ABasePawn::Fire() {
 }
 
 
+void ABasePawn::HandleDestruction()
+{
+	//Visual/Sound Effects
+
+	
+	
+	
+}
+
+
 
